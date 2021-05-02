@@ -1,11 +1,13 @@
 ## What is Ethernet?
 - a method of networking
 - unarguably the world’s **most widely-used** connectivity technology
+- signals and wiring at the physical layer & MAC packets and protocols at the data link layer.
 - uses CSMA/CD
 
 
 ## What is CSMA/CD?
 - stands for **'Carrier Sense Multiple Access/Collision Detection'**
+- 'Listen before Talk'
 - transmits frame on a network
 
 
@@ -15,7 +17,7 @@
 1. **[Carrier Sense]** A PC or server checks if someone is using the network's resource.
 2. If a carrier's detected, it holds sending the frame onto the network.
 3. It starts transmitting its frame if there's no other PC or server transmitting.
-4. **[Multiple Access]** Collision occurs if multiple frames are uploaded at the same time.
+4. **[Multiple Access]** Collision occurs if multiple frames are uploaded at the same time. Then the host sends a ‘jamming signal’ to inform other stations of the collision. 
 5. **[Collision Detection]** The PC or server stops transmitting and waits for a random amount of time(*random backoff period*) until the problem's solved.
 6. It restarts the transmission of the frame.
 
@@ -23,7 +25,7 @@
 ## Collision Domain
 <img src="https://www.thebryantadvantage.com/wp-content/uploads/2018/10/Collision-Domain-1.png" width="80%">
 
-All four hosts are connected to a hub. If one PC tries to communicate, all other PCs will not be able to communicate. 
+All four hosts are connected to a hub. If one PC is transmitting its frame and the network's busy, all other PCs will not be able to transmit their frames. 
 If a collision occurs in that network, all of the PCs will be affected. They are in one 'collision domain'.
 CSMA/CD had developed to protect the collision.  
 
